@@ -1,4 +1,3 @@
-import 'styles/Header.css';
 import Button from './elements/Button';
 import profilePic from 'assets/images/picture.png';
 import { useState } from 'react';
@@ -6,6 +5,7 @@ import Input from './elements/Input';
 import { NavLink } from 'react-router-dom';
 import SearchIcon from 'assets/svgs/search.svg?react';
 import LogoIcon from 'assets/svgs/logo.svg?react';
+import 'styles/header.css';
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');

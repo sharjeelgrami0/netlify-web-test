@@ -1,4 +1,3 @@
-import 'styles/MainContent.css';
 import JobCard from './Card';
 import { useState } from 'react';
 import Input from './elements/Input';
@@ -7,6 +6,7 @@ import SearchIcon from 'assets/svgs/search.svg?react'
 import Dropdown from './elements/Dropdown';
 import Tags from './elements/Tags';
 import teamImage from 'assets/images/team.png';
+import 'styles/mainContent.css';
 
 const MainContent = () => {
   const [searchTerm, setSearchTerm] = useState('');

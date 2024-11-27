@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu } from '@headlessui/react';
-import 'styles/elements/dropdown.css';
 import ArrowIcon from 'assets/svgs/arrow.svg?react'
+import 'styles/elements/dropdown.css';
 
 interface DropdownOption {
   label: string;

@@ -1,7 +1,7 @@
 import banner from 'assets/images/banner.jpg';
 import displayPicture from 'assets/images/display_picture.png';
 import ArrowIcon from 'assets/svgs/arrow.svg?react'
-import 'styles/Sidebar.css';
+import 'styles/sidebar.css';
 
 const Sidebar = () => {
   return (

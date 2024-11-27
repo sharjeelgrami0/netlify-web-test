@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import 'styles/elements/Input.css'
+import 'styles/elements/input.css'
 
 interface InputProps {
   type?: string;
