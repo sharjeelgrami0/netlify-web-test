@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Header from './components/Header';
-import Sidebar from './components/Sidebara';
+import Sidebar from './components/Sidebar';
 import 'styles/global.css';
 import 'styles/typography.css';
 
