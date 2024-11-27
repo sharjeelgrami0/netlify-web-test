@@ -1,0 +1,52 @@
+.main-content {
+  flex-grow: 1;
+  .title{
+    .heading {
+      padding-bottom: 5px;
+    }
+    span {
+      color: #0154AA
+    }
+  }
+}
+
+.welcome-section {
+  .title {
+    padding-bottom: 20px;
+  }
+}
+
+.search-filters {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.search-wrap {
+  flex-grow: 1
+}
+  
+.job-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 25px;
+  /* gap: 15px; */
+}
+
+.similar-filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  p {
+    margin-right: 15px;
+  }
+}
+
+/* .job-section {} */
+
+.card-main-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+}

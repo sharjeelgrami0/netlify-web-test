@@ -1,0 +1,53 @@
+.sidebar {
+  max-width: 350px;
+  margin-right: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.profile {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.profile-stats {
+  padding: 20px;
+  p:not(:last-child) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E9ECEF;
+  }
+}
+
+.banner-wrap {
+  display: flex;
+  position: relative;
+  margin-bottom: 43px;
+}
+
+.profile-wrap {
+  padding-top: 10px;
+  max-width: 235px;
+  margin: auto;
+}
+
+.profile-image {
+  width: 86px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+
+.calendar {
+}
+
+.calendar-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}

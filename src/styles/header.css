@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #fff;
+}
+
+.nav {
+  flex-grow: 1;
+}
+  
+.nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  &:hover {
+    color: #0154AA;
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar {
+  margin-right: 10px;
+}

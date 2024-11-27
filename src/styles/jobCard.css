@@ -1,0 +1,49 @@
+.job-grid{
+  width: 20%;
+  max-width: 20%;
+}
+
+.job-card {
+  background-color: #fff;
+  padding: 10px 20px;
+
+  .button-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+.promoted {
+  padding-bottom: 5px;
+  color: #333333;
+}
+
+.card-profile {
+  margin-right: 10px;
+  padding: 8px;
+  object-fit: contain;
+}
+
+.card-wrap {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.card-icon {
+  margin-right: 10px;
+}
+
+.card-details {
+  padding-bottom: 15px;
+  .location, .applicant {
+    display: flex;
+    align-items: center;
+  }
+
+  .location:not(.applicant) {
+    padding-bottom: 10px;
+  }
+}
