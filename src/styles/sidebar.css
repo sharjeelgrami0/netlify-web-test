@@ -44,9 +44,6 @@
   transform: translate(-50%, 50%);
 }
 
-.calendar {
-}
-
 .calendar-wrap {
   display: flex;
   justify-content: space-between;
