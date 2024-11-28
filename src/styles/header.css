@@ -57,3 +57,7 @@
     margin: 0 0 20px;
   }
 }
+
+.hamburger-menu {
+  z-index: 11;
+}
