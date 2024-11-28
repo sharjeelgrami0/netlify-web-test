@@ -18,10 +18,10 @@ const MainContent = () => {
   }
   const jobs = [
     { url: teamImage, title: 'UI/UX Designer', designation: 'Teams', location: 'Seattle, USA (Remote)', date: '1 day ago', applicants: 22 },
-    { url: teamImage, title: 'Frontend Developer', designation: 'Teams', location: 'New York, USA (Remote)', date: '2 days ago', applicants: 15 },
+    { url: teamImage, title: 'Developer', designation: 'Teams', location: 'New York, USA (Remote)', date: '2 days ago', applicants: 15 },
     { url: teamImage, title: 'Graphic Designer', designation: 'Teams', location: 'San Francisco, USA', date: '3 days ago', applicants: 30 },
     { url: teamImage, title: 'UI/UX Designer', designation: 'Teams', location: 'Seattle, USA (Remote)', date: '1 day ago', applicants: 22 },
-    { url: teamImage, title: 'Frontend Developer', designation: 'Teams', location: 'New York, USA (Remote)', date: '2 days ago', applicants: 15 },
+    { url: teamImage, title: 'Developer', designation: 'Teams', location: 'New York, USA (Remote)', date: '2 days ago', applicants: 15 },
   ];
 
   const options = [
@@ -46,8 +46,8 @@ const MainContent = () => {
           <h1 className='heading'>Find your Dream Job, <span>Albert!</span></h1>
           <p>Explore the latest job openings and apply for the best opportunities available today!</p>
         </div>
-        <div className="search-filters">
-          <div className='search-wrap'>
+        <div className="row search-filters">
+          <div className='col-12 col-md-auto search-wrap p-md-0 pb-2 pb-md-0'>
             <Input
               placeholder="Job Title, Company, or Keywords"
               value={searchTerm}
@@ -56,27 +56,33 @@ const MainContent = () => {
               className='control-width-250'
             />
           </div>
-          <Dropdown
-            options={options}
-            placeholder="Select Location"
-            onSelect={handleSelect}
-          />
-          <Dropdown
-            options={options}
-            placeholder="Job Type"
-            onSelect={handleSelect}
-          />
-          <Button
-            label="Search"
-            icon={<SearchIcon width={16} height={16} stroke='#FFFFFF' />}
-            onClick={() => handleClick('Search')}
-            variant="primary"
-            iconPosition="left"
-            size='md'
-            style={{
-              minWidth: '140px'
-            }}
-          />
+          <div className='col-12 col-sm-auto p-sm-0 pb-2 pb-sm-0'>
+            <Dropdown
+              options={options}
+              placeholder="Select Location"
+              onSelect={handleSelect}
+            />
+          </div>
+          <div className='col-12 col-sm-auto p-sm-0 pb-2 pb-sm-0'>
+            <Dropdown
+              options={options}
+              placeholder="Job Type"
+              onSelect={handleSelect}
+            />
+          </div>
+          <div className='col-12 col-sm-auto p-sm-0 pb-2 pb-sm-0'>
+            <Button
+              label="Search"
+              icon={<SearchIcon width={16} height={16} stroke='#FFFFFF' />}
+              onClick={() => handleClick('Search')}
+              variant="primary"
+              iconPosition="left"
+              size='md'
+              style={{
+                minWidth: '140px'
+              }}
+            />
+          </div>
         </div>
         <div className='similar-filters'>
           <p className='color-light-gray'>Similar:</p>
@@ -90,7 +96,7 @@ const MainContent = () => {
           <h2 className='title'>Featured Jobs</h2>
           <a className='sub-title color-blue' href='#'>See Featured Jobs</a>  
         </div>
-        <div className="job-cards">
+        <div className="row">
           {jobs.map((job, index) => (
             <JobCard key={index} {...job} />
           ))}
@@ -102,7 +108,7 @@ const MainContent = () => {
           <h2 className='title'>Recommended Jobs</h2>
           <a className='sub-title color-blue' href='#'>See Recommended Jobs</a>  
         </div>
-        <div className="job-cards">
+        <div className="row">
           {jobs.map((job, index) => (
             <JobCard key={index} {...job} />
           ))}

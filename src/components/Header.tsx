@@ -6,8 +6,10 @@ import { NavLink } from 'react-router-dom';
 import SearchIcon from 'assets/svgs/search.svg?react';
 import LogoIcon from 'assets/svgs/logo.svg?react';
 import 'styles/header.css';
+import { Sling as Hamburger } from 'hamburger-react';
+import NavBar from './elements/Nav';
 
-const Header = () => {
+export const HeaderItems = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,50 +21,44 @@ const Header = () => {
   };
 
   return (
+    <>
+      <Input
+        placeholder="Search"
+        value={searchTerm}
+        onChange={handleSearchChange}
+        icon={<SearchIcon width={16} height={16} stroke="#737A91" />}
+        variant="outline"
+      />
+      <Button
+        label="Resume Builder"
+        onClick={() => handleClick('Primary')}
+        variant="primary"
+        size="lg"
+      />
+    </>
+  );
+};
+
+const Header = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  return (
     <header className="header">
-      <div className="logo">
+      <div className="logo flex-grow-1 flex-lg-grow-0">
         <NavLink to="/" end>
           <LogoIcon width={40} height={40} />
         </NavLink>
       </div>
-      <nav className="nav">
-        <NavLink to="/" end className={({ isActive }) => (isActive ? 'color-blue' : '')}>
-          Find Jobs
-        </NavLink>
-        <NavLink to="/top-companies" className={({ isActive }) => (isActive ? 'color-blue' : '')}>
-          Top Companies
-        </NavLink>
-        <NavLink to="/job-tracker" className={({ isActive }) => (isActive ? 'color-blue' : '')}>
-          Job Tracker
-        </NavLink>
-        <NavLink to="/my-calendar" className={({ isActive }) => (isActive ? 'color-blue' : '')}>
-          My Calendar
-        </NavLink>
-        <NavLink to="/documents" className={({ isActive }) => (isActive ? 'color-blue' : '')}>
-          Documents
-        </NavLink>
-        <NavLink to="/messages" className={({ isActive }) => (isActive ? 'color-blue' : '')}>
-          Messages
-        </NavLink>
-        <NavLink to="/notifications" className={({ isActive }) => (isActive ? 'color-blue' : '')}>
-          Notifications
-        </NavLink>
-      </nav>
+      {isOpen && (
+        <NavBar className='mobile-nav' />
+      )}
+      <NavBar className="d-none d-lg-block" />
       <div className="header-actions">
-        <Input
-          placeholder="Search"
-          value={searchTerm}
-          onChange={handleSearchChange}
-          icon={<SearchIcon width={16} height={16} stroke="#737A91" />}
-          variant="outline"
-        />
-        <Button
-          label="Resume Builder"
-          onClick={() => handleClick('Primary')}
-          variant="primary"
-          size="lg"
-        />
+        <HeaderItems  />
         <img src={profilePic} alt="Profile" className="profile-pic" />
+      </div>
+      <div className="hamburger-menu d-lg-none ps-3">
+        <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>
     </header>
   );

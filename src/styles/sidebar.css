@@ -1,6 +1,4 @@
 .sidebar {
-  max-width: 350px;
-  margin-right: 25px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -33,6 +31,10 @@
   padding-top: 10px;
   max-width: 235px;
   margin: auto;
+}
+
+.banner-image {
+  width: 100%;
 }
 
 .profile-image {

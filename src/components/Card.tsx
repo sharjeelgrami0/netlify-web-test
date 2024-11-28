@@ -15,7 +15,7 @@ interface JobCardProps {
 
 const JobCard = ({ url, title, designation, location, date, applicants }: JobCardProps) => {
   return (
-    <div className='job-grid'>
+    <div className='col-12 col-sm-6 col-md-4 col-xl-3 job-grid'>
       <div className="job-card">
         <h6 className="promoted">Promoted</h6>
         <div className='card-wrap'>

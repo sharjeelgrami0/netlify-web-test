@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import 'styles/global.css';
 import 'styles/typography.css';
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 const HomePage = lazy(() => import('./pages/Home'));
 const DocumentsPage = lazy(() => import('./pages/Documents'));
@@ -18,20 +19,24 @@ const App = () => {
   return (
     <div className="container">
       <Header />
-      <div className="content">
-        <Sidebar />
-        <Suspense fallback={<div>Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/top-companies" element={<TopCompaniesPage />} />
-            <Route path="/job-tracker" element={<JobTrackerPage />} />
-            <Route path="/my-calendar" element={<MyCalendarPage />} />
-            <Route path="/documents" element={<DocumentsPage />} />
-            <Route path="/messages" element={<MessagesPage />} />
-            <Route path="/notifications" element={<NotificationsPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Suspense>
+      <div className="row">
+        <div className="col-12 col-lg-3 pb-4 pb-lg-0">
+          <Sidebar />
+        </div>
+        <div className="col-12 col-lg-9">
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/top-companies" element={<TopCompaniesPage />} />
+              <Route path="/job-tracker" element={<JobTrackerPage />} />
+              <Route path="/my-calendar" element={<MyCalendarPage />} />
+              <Route path="/documents" element={<DocumentsPage />} />
+              <Route path="/messages" element={<MessagesPage />} />
+              <Route path="/notifications" element={<NotificationsPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Suspense>
+        </div>
       </div>
     </div>
   );

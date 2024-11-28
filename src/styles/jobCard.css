@@ -1,11 +1,13 @@
 .job-grid{
-  width: 20%;
-  max-width: 20%;
+  @media (min-width: 1400px) {
+    width: 20%;
+    max-width: 20%;
+  }
 }
 
 .job-card {
   background-color: #fff;
-  padding: 10px 20px;
+  padding: 10px;
 
   .button-wrap {
     display: flex;

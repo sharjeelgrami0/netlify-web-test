@@ -7,6 +7,11 @@
 
 .nav {
   flex-grow: 1;
+  .input-container, .custom-button {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
 }
   
 .nav a {
@@ -21,8 +26,34 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-shrink: 0;
+  .input-container, .custom-button {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
 }
 
 .search-bar {
   margin-right: 10px;
+}
+
+.mobile-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #e5e5e5;
+  max-width: 300px;
+  width: 100%;
+  z-index: 10;
+  padding: 20px;
+  &.nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-container, .custom-button, a {
+    margin: 0 0 20px;
+  }
 }
